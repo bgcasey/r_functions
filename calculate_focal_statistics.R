@@ -30,7 +30,7 @@ calculate_focal_stat <-
   function(raster_input, window_size_meters,
            fun, n_cores = 1) {
     # Step 1: Get the cell size (assuming x and y resolution are the same)
-    cell_size <- res(raster_input)[1]
+    test_size <- res(raster_input)[1]
 
     # Step 2: Calculate window size
     window_size <- ceiling(window_size_meters / cell_size)
